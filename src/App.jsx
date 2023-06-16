@@ -7,12 +7,9 @@ import 'react-reflex/styles.css'
 // Create a client
 const queryClient = new QueryClient();
 
-// Create a mock fetch function with delay
 const fetchMockData = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts/1');
   const data = await res.json();
-  // To simulate network delay
-  await new Promise(resolve => setTimeout(resolve, 2000));
   return data;
 }
 
